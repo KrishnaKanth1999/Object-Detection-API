@@ -1,0 +1,24 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='css/index.css') }}">
+  <script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
+</head>
+<body>
+  <h1 class='title'>Object detection API </h1>
+  <div id="container">
+    <img src="" id="image" class="center">
+    <div id="text-container">
+      <p id="instruction" class="green-color">
+      <button id="uploader-btn" onClick="clickUploader()">Upload image, or drag an image there.</button>
+      <p id="warning" class="result-color"></p>
+      <p class="result-color">
+        The result is:
+      </p>
+      <input name="imgFile" type="file" id="fileUploader" accept="image/*" onChange="handleFiles()">
+    </div>
+	<img id="imagebox" src="">
+  </div>
+    <script src="{{ url_for('static',filename='js/index.js') }}"></script>
+</body>
+</html>
